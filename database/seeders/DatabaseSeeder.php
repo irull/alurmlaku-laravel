@@ -32,37 +32,44 @@ class DatabaseSeeder extends Seeder
         User::factory(3)->create();
 
         Category::create([
-            'name' => 'Wisata Umum',
+            // 'name' => 'Wisata Umum',
+            'name' => 'General',
             'slug' => 'wisata-umum'
         ]);
 
         Category::create([
-            'name' => 'Wisata Alam',
+            // 'name' => 'Wisata Alam',
+            'name' => 'Natural',
             'slug' => 'wisata-alam'
         ]);
 
         Category::create([
-            'name' => 'Wisata Edukasi',
+            // 'name' => 'Wisata Edukasi',
+            'name' => 'Education',
             'slug' => 'wisata-edukasi'
         ]);
 
         Category::create([
-            'name' => 'Wisata Religi dan Sejarah',
+            // 'name' => 'Wisata Religi dan Sejarah',
+            'name' => 'Religious and Historical',
             'slug' => 'wisata-religi-dan-sejarah'
         ]);
 
         Category::create([
-            'name' => 'Wisata Kuliner',
+            // 'name' => 'Wisata Kuliner',
+            'name' => 'Culinary',
             'slug' => 'wisata-kiliner'
         ]);
 
         Category::create([
-            'name' => 'Wisata Belanja',
+            // 'name' => 'Wisata Belanja',
+            'name' => 'Shopping',
             'slug' => 'wisata-belanja'
         ]);
         
         Category::create([
-            'name' => 'Wisata Budaya',
+            // 'name' => 'Wisata Budaya',
+            'name' => 'Culture',
             'slug' => 'wisata-budaya'
         ]);
         // Category::factory(7)->create();
