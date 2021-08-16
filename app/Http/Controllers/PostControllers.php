@@ -13,7 +13,7 @@ class PostControllers extends Controller
     {
         // dd(Post::latest()->get());
         return view('posts',[
-            "title" => "Posts",
+            "title" => "All Posts",
             // "posts" => Post::all()
             "posts" => Post::latest()->get()
         ]);   
