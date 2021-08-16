@@ -26,7 +26,7 @@
 <div class="container">
   <div class="row">
     @foreach ($posts->skip(1) as $post)
-    <div class="col-md-4 mb-3">
+    <div class="col-md-4 mb-5">
       <div class="card">
         <div class="position-absolute px-3 py-2 bg-dark bg-opacity-75"><a href="/categories/{{ $post->category->slug }}" class="text-white text-decoration-none">{{ $post->category->name }} </a></div>
         <img src="https://source.unsplash.com/500x400?{{ $post->category->name }}" class="card-img-top" alt="{{ $post->category->name }}">

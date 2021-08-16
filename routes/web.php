@@ -20,13 +20,15 @@ use App\Models\User;
 
 Route::get('/', function () {
     return view('home',[
-        "title" => "Home"
+        "title" => "Home",
+        'active' => 'home'
     ]);
 });
 
 Route::get('/community', function () {
     return view('community',[
-        "title" => "Community"
+        "title" => "Community",
+        'active' => 'community'
     ]);
 });
 
@@ -37,6 +39,7 @@ Route::get('posts/{post:slug}', [PostControllers::class, 'show']);
 Route::get('/contacts', function () {
     return view('contacts',[
         "title" => "Contacts",
+        'active' => 'contacts',
         "name" => "Irul Latif",
         "email" => "irulsoekamti94@gmail.com",
         "notelp" => "081290000520",
@@ -47,6 +50,7 @@ Route::get('/contacts', function () {
 Route::get('/about', function () {
     return view('about',[
         "title" => "About",
+        'active' => 'about',
         "name" => "Irul Latif",
         "email" => "irulsoekamti94@gmail.com",
         "image" =>  "image.jpeg"
@@ -56,6 +60,7 @@ Route::get('/about', function () {
 Route::get('/categories', function () {
     return view('categories', [
         'title' => 'Categories',
+        'active' => 'categories',
         'categories' => Category::all()
     ]);
 });
@@ -63,6 +68,7 @@ Route::get('/categories', function () {
 Route::get('/categories/{category:slug}', function(Category $category){
     return view('posts', [
         'title' => "Post By Category : $category->name",
+        'active' => 'categories',
         'posts' => $category->posts->load('category', 'author')
     ]);
 });
@@ -70,6 +76,7 @@ Route::get('/categories/{category:slug}', function(Category $category){
 Route::get('/authors/{author:username}', function(User $author){
     return view('posts', [
         'title' => "Post By Author : $author->name",
+        // 'active' => 'categories',
         'posts' => $author->posts->load('category', 'author'),
     ]);
 });
