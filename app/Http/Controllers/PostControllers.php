@@ -21,7 +21,6 @@ class PostControllers extends Controller
 
     public function show(Post $post)
     {
-        // dd($post);
     return view('post',[
         "title" => "Single Post",
         "post" => $post
