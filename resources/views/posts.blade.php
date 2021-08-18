@@ -55,7 +55,7 @@
 </div>
 
 @else
-<p class="'text-center fs-4">No Post Found.</p>
+<p class="text-center fs-4">No Post Found.</p>
 @endif
 
 
