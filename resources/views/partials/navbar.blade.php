@@ -24,6 +24,9 @@
         <li class="nav-item">
           <a class="nav-link {{ ($active === "contacts") ? 'active' : '' }} "href="/contacts">Contacts</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link {{ ($active === "login") ? 'active' : '' }} btn btn-primary btn-sm"href="/login"><i class="bi bi-box-arrow-in-right"></i> Login</a>
+        </li>
       </ul>
     </div>
   </div>
