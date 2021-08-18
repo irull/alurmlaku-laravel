@@ -72,7 +72,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Culture',
             'slug' => 'wisata-budaya'
         ]);
-        // Category::factory(7)->create();
+        Category::factory(7)->create();
 
         Post::factory(20)->create();
 
