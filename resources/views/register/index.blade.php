@@ -10,7 +10,7 @@
         @csrf
         {{-- <img class="mb-4" src="../img/person-bounding-box.svg" alt="" width="72" height="57"> --}}
         <div class="form-floating">
-          <input type="text" name="name" class="form-control rounded-top @error('name') is-invalid @enderror" id="name" placeholder="Name" required value="{{ old('name') }}">
+          <input type="text" name="name" class="form-control rounded-top @error('name') is-invalid @enderror" id="name" placeholder="Name" required value="{{ old('name') }}" autofocus>
           <label for="name">Name</label>
           @error('name')
               <div class="invalid-feedbecl">
