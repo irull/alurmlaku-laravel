@@ -8,14 +8,15 @@
     @foreach ($categories as $category)
     <div class="col-md-4 mb-4">
       <a href="/posts?category={{ $category->slug }}">
-      <div class="card text-white">
-        <img src="https://source.unsplash.com/500x500?{{ $category->name }}" class="card-img" alt="{{ $category->name }}.">
-        <div class="card-img-overlay d-flex align-items-center p-0">
-          <h5 class="card-title text-center  py-4 bg-dark bg-opacity-75 flex-fill fs-3">{{ $category->name }}</h5>
+        <div class="card text-white">
+          <img src="https://source.unsplash.com/500x500?{{ $category->name }}" class="card-img" alt="{{ $category->name }}.">
+          <div class="card-img-overlay d-flex align-items-center p-0">
+            <h5 class="card-title text-center  py-4 bg-dark bg-opacity-75 flex-fill fs-3">{{ $category->name }}</h5>
+          </div>
         </div>
-      </div>
-    </a>
+      </a>
     </div>
+    
     @endforeach
   </div>
 </div>

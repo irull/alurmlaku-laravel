@@ -1,1 +1,6 @@
-<h1>Welcome, Irullatif</h1>
+
+@extends('layouts.main')
+@section('container')
+    
+<h1>Welcome, {{ auth()->user()->name }}</h1>
+@endsection

@@ -13,6 +13,7 @@
     {{-- My Css --}}
     <link rel="stylesheet" href="/css/style.css">
 
+
     <title>AlurMlaku | {{ $title }}</title>
   </head>
   <body>
