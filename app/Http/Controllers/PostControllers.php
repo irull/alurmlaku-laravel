@@ -6,6 +6,7 @@ use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\User;
+// use Cviebrock\EloquentSluggable\Services\SlugService;
 // use Illuminate\Foundation\Http\Middleware\ValidatePostSize;
 
 class PostControllers extends Controller
