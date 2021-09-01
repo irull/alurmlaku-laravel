@@ -16,8 +16,25 @@
       <label for="slug" class="form-label">Slug</label>
       <input type="text" class="form-control" id="slug" name="slug">
     </div>
-    <button type="submit" class="btn btn-primary">Create post</button>
+    <div class="mb-3">
+      <label for="category" class="form-label">Category</label>
+      <select class="form-select" name="category_id">
+        @foreach ($categories as $category)
+            <option value="{{ $category->id }}">{{ $category->name }}</option>
+        @endforeach
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary"><i class="bi bi-plus-lg"></i> Create Post</button>
   </form>
 </div>
 
+<script>
+  const title = document.querySelector('#title');
+  const slug = document.querySelector('#slug');
+  title.addEventListener('change', function(){
+    fetch('/dashboard/posts/checkSLug?title=' + title.value)
+    .then(response => response.json())
+    .then(data => slug.value = data.slug)
+  });
+</script>
 @endsection
