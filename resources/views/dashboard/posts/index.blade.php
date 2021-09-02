@@ -22,10 +22,10 @@
         <td>{{ $loop->iteration }}</td>
         <td>{{ $post->title }}</td>
         <td>{{ $post->category->name }}</td>
-        <td>
-          <a href="/dashboard/posts/{{ $post->slug }}" class="badge bg-info" data-bs-toggle="tooltip" data-bs-placement="bottom" title="View"><i class="bi bi-eye"></i></a>
-          <a href="" class="badge bg-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit"><i class="bi bi-pencil-square"></i> </a>
-          <a href="" class="badge bg-danger" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Delete"><i class="bi bi-exclamation-lg"></i></a>
+        <td class="responsive">
+          <a href="/dashboard/posts/{{ $post->slug }}" class="btn btn-sm bg-info rounded-pill" data-bs-toggle="tooltip" data-bs-placement="bottom" title="View"><i class="bi bi-eye"></i> View</a>
+          <a href="" class="btn btn-sm bg-warning rounded-pill" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit"><i class="bi bi-pencil-square"></i> Edit</a>
+          <a href="" class="btn btn-sm bg-danger rounded-pill" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Delete"><i class="bi bi-x-lg"></i> elete</a>
         </td>
       </tr>
       @endforeach
