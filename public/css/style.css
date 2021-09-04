@@ -18,3 +18,11 @@
     border-radius: 0;
     margin-bottom: -1px;
 }
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+.map {
+    height: 100%;
+}

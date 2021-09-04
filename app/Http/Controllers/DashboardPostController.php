@@ -17,8 +17,8 @@ class DashboardPostController extends Controller
      */
     public function index()
     {
-        return view("dashboard.posts.index", [
-            "posts" => Post::where('user_id', auth()->user()->id)->get()
+        return view('dashboard.posts.index', [
+            'posts' => Post::where('user_id', auth()->user()->id)->get()
         ]);
     }
 
@@ -42,19 +42,20 @@ class DashboardPostController extends Controller
      */
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
+        $validateData = $request->validate([
             'title' => 'required|max:255',
             'slug' => 'required|unique:posts',
             'category_id' => 'required',
-            'body' => 'required'
+            'body' =>'required'
         ]);
 
-        $validatedData['user_id'] = auth()->user()->id;
-        $validatedData['excerpt'] = Str::limit(strip_tags($request->body), 200);
+        $validateData['user_id'] = auth()->user()->id;
+        $validateData['excerpt'] = Str::limit(strip_tags($request->nody), 100);
 
-        Post::create($validatedData);
+        Post::create($validateData);
 
-        return redirect('/dashboard/posts')->with('success', 'New post has been added!');
+        return redirect('/dashboard/posts')->with('success', 'New post has ben added!');
+
     }
 
     /**
@@ -106,7 +107,7 @@ class DashboardPostController extends Controller
 
     public function checkSlug(Request $request)
     {
-        $slug = SlugService::createSlug(Post::class, 'slug', $request->title);
+        $slug =  SlugService::createSlug(Post::class, 'slug', $request->title);
         return response()->json(['slug' => $slug]);
     }
 }

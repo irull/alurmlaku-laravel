@@ -11,8 +11,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
     {{-- My Css --}}
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href={{ asset("/css/style.css") }}>
 
+    <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyF5Xm1dEYWWQw8TGmMgeOzUrULM7lS3k&callback=initMap&libraries=&v=weekly"
+    async
+  ></script>
 
     <title>AlurMlaku | {{ $title }}</title>
   </head>
