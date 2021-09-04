@@ -5,9 +5,9 @@
   <div class="row my-3">
     <div class="col-lg-8">
       <h1 class="mb-3">{{ $post->title }}</h1>
-        <a href="/dashboard/posts" class="btn btn-success"><i class="bi bi-chevron-left"></i> Back to my all Posts</a>
-        <a href="" class="btn btn-warning"><i class="bi bi-pencil-square"></i> Edit</a>
-        <a href="" class="btn btn-danger"><i class="bi bi-exclamation-lg"></i> Delete</a>
+        <a href="/dashboard/posts" class="btn btn-success"> <span data-feather="arrow-left"></span> Back to my all Posts</a>
+        <a href="" class="btn btn-warning"> <span data-feather="edit"></span> Edit</a>
+        <a href="" class="btn btn-danger"> <span data-feather="x-circle"></span> Delete</a>
 
       <img src="https://source.unsplash.com/1200x500?{{ $post->category->name }}" alt="{{ $post->category->name }}" class="img-fluid mt-3">
 
