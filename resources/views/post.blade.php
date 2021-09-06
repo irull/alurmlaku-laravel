@@ -16,7 +16,7 @@
                     {!! $post->body !!}
                 </article>
                 <div class="d-flex justify-content-start">
-                <a href="/posts" class="d-block mt-3 btn btn-outline-info">Back To Posts</a>
+                <a href="/posts" class="d-block mt-3 btn btn-outline-info shadow-none">Back To Posts</a>
                 </div>
 
             </div>
