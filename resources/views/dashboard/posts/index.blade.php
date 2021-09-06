@@ -5,14 +5,14 @@
     </div>
 
     <div class="table-responsive col-lg-8">
-        <a href="/dashboard/posts/create" class="btn btn-primary shadow-none mb-3"><i class="bi bi-plus-lg"></i> Create new post</a>
+        <a href="/dashboard/posts/create" class="btn btn-primary shadow-none mb-3 rounded-pill"><i class="bi bi-plus-lg"></i> Create new post</a>
 
           @if (session()->has('success'))
               <div class="alert alert-success" role="alert">
                 {{ session('success') }}
               </div>
           @endif
-        <table class="table table-striped table-sm">
+        <table class="table table-striped table-sm table-hover align-middle">
           <thead>
             <tr>
               <th scope="col">#</th>
@@ -28,9 +28,13 @@
                   <td>{{ $post->title }}</td>
                   <td>{{ $post->category->name }}</td>
                   <td>
-                      <a href="/dashboard/posts/{{ $post->slug }}" class="badge bg-info"><i class="bi bi-eye-fill"></i></a>
-                      <a href="" class="badge bg-warning"><i class="bi bi-pencil-square"></i></a>
-                      <a href="" class="badge bg-danger"><i class="bi bi-x-lg"></i></a>
+                      <a href="/dashboard/posts/{{ $post->slug }}" class="btn bg-info border-0 rounded-circle shadow-none" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Detail"><i class="bi bi-eye-fill"></i></a>
+                      <a href="/dashboard/posts/{{ $post->slug }}/edit" class="btn bg-warning border-0 rounded-circle shadow-none" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit"><i class="bi bi-pencil-square"></i></a>
+                      <form action="/dashboard/posts/{{ $post->slug }}" method="post" class="d-inline">
+                      @method('delete')
+                      @csrf
+                      <button class="btn bg-danger border-0 rounded-circle shadow-none" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Delete" onclick="return confirm('Are you sure?')"><i class="bi bi-trash"></i></button>
+                      </form>
                   </td>
                 </tr>
             @endforeach

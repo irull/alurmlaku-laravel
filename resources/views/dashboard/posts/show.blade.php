@@ -5,9 +5,13 @@
   <div class="row my-3">
     <div class="col-lg-8">
       <h1 class="mb-3">{{ $post->title }}</h1>
-        <a href="/dashboard/posts" class="btn btn-success shadow-none"><i class="bi bi-chevron-left"></i> Back to my all Posts</a>
-        <a href="" class="btn btn-warning shadow-none"><i class="bi bi-pencil-square"></i> Edit</a>
-        <a href="" class="btn btn-danger shadow-none"><i class="bi bi-exclamation-lg"></i> Delete</a>
+        <a href="/dashboard/posts" class="btn btn-success shadow-none rounded-pill"><i class="bi bi-chevron-left"></i> Back to my all Posts</a>
+        <a href="/dashboard/posts/{{ $post->slug }}/edit" class="btn btn-warning shadow-none rounded-pill"><i class="bi bi-pencil-square"></i> Edit</a>
+        <form action="/dashboard/posts/{{ $post->slug }}" method="post" class="d-inline">
+          @method('delete')
+          @csrf
+          <button class="btn btn-danger shadow-none rounded-pill" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Delete Post" onclick="return confirm('Are you sure?')"><i class="bi bi-trash"></i> Delete</button>
+          </form>
 
       <img src="https://source.unsplash.com/1200x500?{{ $post->category->name }}" alt="{{ $post->category->name }}" class="img-fluid mt-3">
 
