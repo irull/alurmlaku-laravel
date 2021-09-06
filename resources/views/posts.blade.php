@@ -14,7 +14,7 @@
                 @endif
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" placeholder="Search" name="search" value="{{ request('search') }}">
-                    <button class="btn btn-primary shadow-none" type="submit">Search</button>
+                    <button class="btn btn-info shadow-none" type="submit">Search</button>
                   </div>
             </form>
         </div>
@@ -31,7 +31,7 @@
                 </small>
             </p>
             <p class="card-text">{{ $posts[0]->excerpt }}</p>
-            <a href="/posts/{{ $posts[0]->slug }}" class="text-decoration-none btn btn-primary shadow-none">Read More</a>
+            <a href="/posts/{{ $posts[0]->slug }}" type="button" class="btn btn-info shadow-none">Read More</a>
         </div>
     </div>
 
@@ -41,7 +41,7 @@
             @foreach ($posts->skip(1) as $post )
             <div class="col-md-4 mb-3">
                 <div class="card">
-                    <div class="position-absolute px-3 py-2" style="background-color: rgba(0,0,0,0.7)"><a href="/posts?category={{ $post->category->slug }}" class="text-white text-decoration-none">{{ $post->category->name }}</a></div>
+                    <div class="position-absolute px-3 py-2" style="background-color: rgba(0,0,0,0.7)"><a href="/posts?category={{ $post->category->slug }}" class="text-white text- text-decoration-none">{{ $post->category->name }}</a></div>
                     <img src="https://source.unsplash.com/500x400?{{ $post->category->name }}" class="card-img-top" alt="{{ $post->category->name }}">
                     <div class="card-body">
                       <h5 class="card-title">{{ $post->title }}</h5>
@@ -51,7 +51,7 @@
                         </small>
                         </p>
                       <p class="card-text">{{ $post->excerpt}}</p>
-                      <a href="/posts/{{ $post->slug }}" class="btn btn-primary shadow-none">Read more</a>
+                      <a href="/posts/{{ $post->slug }}" class="btn btn-info shadow-none">Read more</a>
                     </div>
                   </div>
             </div>

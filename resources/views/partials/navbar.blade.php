@@ -1,8 +1,8 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-lg navbar-light navbar sticky-top bg-info">
   <div class="container">
     <a class="navbar-brand" href="/">AlurMlaku</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon "></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
@@ -42,8 +42,8 @@
           </ul>
         </li>
         @else
-        <li class="nav-item">
-          <a class="nav-link {{ ($active === "login") ? 'active' : '' }} btn btn-primary btn-sm"href="/login"><i class="bi bi-box-arrow-in-right"></i> Login</a>
+        <li class="nav-item fw-bold">
+          <a class="nav-link {{ ($active === "login") ? 'active' : '' }} btn btn-info btn-sm shadow-none"href="/login"><i class="bi bi-box-arrow-in-right"></i> Login</a>
         </li>
         @endauth
       </ul>
