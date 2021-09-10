@@ -43,7 +43,7 @@
         </li>
         @else
         <li class="nav-item fw-bold">
-          <a class="nav-link {{ ($active === "login") ? 'active' : '' }} btn btn-info btn-sm shadow-none"href="/login"><i class="bi bi-box-arrow-in-right"></i> Login</a>
+          <a class="nav-link {{ ($active === "login") ? 'active' : '' }} btn btn-info shadow-none"href="/login"><i class="bi bi-box-arrow-in-right"></i> Login</a>
         </li>
         @endauth
       </ul>
