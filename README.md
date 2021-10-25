@@ -63,4 +63,4 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ## Detail Prog
 
-Blog laravel, mengikuti tutorial WPU menggunakan Laravel 8
+Blog laravel, mengikuti tutorial WPU menggunakan Laravel 8 , Sekalian test git
